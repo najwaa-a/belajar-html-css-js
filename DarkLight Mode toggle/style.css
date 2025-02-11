@@ -1,0 +1,101 @@
+:root { /* berfungsi untuk Mendefinisikan variabel CSS untuk warna background, warna slider, dan warna lingkaran di dalam slider. */
+   /* kenapa pakai :root , agar nilai variable bisa digunakan di seluruh dokumen*/
+   --background-color: #ffffff;
+   --slider-bg-color: #ccc;
+   --slider-circle-color: #ffffff;
+}
+
+[data-theme="dark"] { /* Untuk dark mode*/
+   /* background akan berubah kenjadi warna gelap, dan slider akan berubah menjadi warna abu - abu*/
+   --background-color: #1e272e;
+   --slider-bg-color: #4d4d4d;
+   --slider-circle-color: #333333;
+}
+
+body{ /* Mengatur tampilan dasar halaman */
+   background-color: var(--background-color); /*menggunakan var() jadi background tergantung pada theme yang dipilih*/
+   font-family: Arial, sans-serif;
+   transition: background-color 0.3s, color 0.3s; /* untuk mengatur transisi warna background dan warna teks*/
+}
+
+.container { /* untuk mengatur tampilan container */
+   max-width: 600px; /* untuk mengatur lebar maksimal container */
+   margin: 50px auto; /* untuk mengatur jarak container dari atas dan bawah */
+   padding: 20px; /* untuk mengatur jarak antar elemen */
+   text-align: center; /* untuk mengatur posisi teks */
+}
+
+h1 { /* untuk mengatur tampilan judul */
+   font-size: 16px;
+}
+
+.theme-switch { /* untuk mengatur tampilan atau ukuran tombol tema */
+   display: inline-block; /* untuk mengatur posisi tombol, tombolnya akan berada di baris yang sama */
+   position: relative; /* untuk mengatur posisi tombol, tombolnya akan berada di atas */
+   width: 60px;
+   height: 34px;
+   margin-top: 180px; /* untuk mengatur jarak tombol dari atas, agar tidak terlalu dekat dengan elemen lain*/
+}
+
+.theme-switch input { /* untuk mengatur tampilan input tombol tema, disembunyikan karena kita hanya butuh fungsinya untuk mengaktifkan switch */
+   opacity: 0;
+   width: 0;
+   height: 0;
+}
+
+.slider { /* untuk mengatur tampilan slider, slider dibuat melapisi input checkbox */
+   position: absolute; /* untuk mengatur posisi slider, slider akan berada di atas */
+   cursor: pointer; /* untuk mengatur tampilan kursor, kursor akan berubah menjadi tangan */
+   left: 0;
+   top:0;
+   right: 0;
+   bottom: 0;
+   background-color: var(--slider-bg-color); /* untuk mengatur warna latar belakang slider, warnanya akan mengikuti variable --slider-bg-color */
+   transition: 0.4s;
+   border-radius: 34px; /* untuk mengatur bentuk slider */
+   box-shadow:
+      inset 0 2px 4px rgba(0, 0, 0, 0.2),
+
+      0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.slider:before { /* untuk membuat lingkaran tombol di dalam slider */
+   position: absolute; 
+   content: "";
+   height: 26px;
+   width: 26px;
+   left: 4px;
+   bottom: 4px;
+   background-color: var(--slider-circle-color);
+   transition: 0.4s;
+   border-radius: 50%;
+   box-shadow: /* agar terlihat lebih nyata*/
+      0 2px 4px rgba(0, 0, 0, 0.2),
+      inset 0 -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+input:checked + .slider { /* warna slider saat dinyalakan*/
+   background-color: #0fbcf9; /* warna latar slider akan berubah menjadi biru terang*/
+}
+
+input:checked + .slider:before { /*memindahkan lingkaran*/
+   transform: translateX(26px); /* menggeser lingkaran ke kanan sejauh 26px*/
+}
+
+.slider:after { /*menambahkan icon bulan purnama */
+   content: "🌙";
+   position: absolute;
+   left: 4px;
+   top: 46%;
+   transform: translateY(-50%);
+   font-size: 18px;
+   opacity: 1;
+   transition: 0.4s;
+}
+
+input:checked + .slider:after { /*mengubah icon menjadi matahari saat dinyalakan */
+   content: "☀️";
+   left: 31px;
+   top: 16px;
+   opacity: 1;
+}

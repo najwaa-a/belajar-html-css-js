@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark/light Mode Toggle</title>
+    <link rel="stylesheet" href="style.css"> // menguhubungkan file css
+</head>
+<body>
+    
+    <div class="container"> // berguna untuk menampung elemen-elemen lainnya supaya bisa diatur tata letakny dengan css
+        <label class="theme-switch"> // label ini digunakan untuk menampilkan tombol toggle, juga membungkus elemen input dan slider untuk membuatnya lebih interaktif
+            <input type="checkbox"  
+            id="theme-toggle"> // checkbox tersembunyi yang berfungsi untuk mendeteksi perubahan status (on / off)
+            <span class="slider"></span> // elemen visual yang akan berubah saat toggle di on / off kan
+        </label>
+    </div>
+    <script src="ekstensi.js"></script> // menghubungkan file ekstensi.js dengan file html ini
+</body>
+</html>
