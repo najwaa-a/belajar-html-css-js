@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="login-container">
+        <div class="login-header">
+            <h1>Welcome Back</h1>
+            <p>Please login to continue</p>
+        </div>
+        
+        <form> <!--Fungsi form untuk mengumpulkan data dari user-->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter your password" required>
+            </div>
+    
+            <button type="submit" class="login-btn">Sign In</button>
+    
+            <div class="additional-links">
+                <a href="#">Forgot Password</a>
+                <br>
+                <a href="#">Create New Account</a>
+            </div>
+        </form>
+    
+        <ul class="social-icons"> <!--Fungsi ul untuk daftar ikon media social-->
+            <li> <!--setiap ikon media social dimasukan kedalam list-->
+                <a href="#" style="--color: #1DA1F2;">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </li>
+            <li> <!--li ini juga akan  membuat jarak antara icon social media-->
+                <a href="#" style="--color: #1877F2;">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" style="--color: #f56040;">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

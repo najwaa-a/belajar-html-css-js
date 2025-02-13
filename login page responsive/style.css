@@ -1,0 +1,166 @@
+* { /* wildcard selector -> Menerapkan aturan ke semua elem di halaman*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex; /*menggunakan flexbox untuk memusatkan konten*/
+    justify-content: center; /*Memusatkan konten secara horizontal*/
+    align-items: center; /*Memusatkan konten secara vertikal*/
+    min-height: 100vh;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4); /*Memberikan efek gradasi warna*/
+}
+
+.login-container {
+    background-color: #1e272e;
+    padding: 70px 130px;
+    margin-top: 30px;
+    border-radius: 15px; /*Membuat sudut membulat */
+    box-shadow: 0 15px 35px rgb(0, 0, 0, 0.2);
+    width: 100%; /*Mengatur lebar kontainer*/
+    max-width: 600px; /*Mengatur lebar maksimal kontainer*/
+    transform: translateY(-20px);
+    position: relative; /*Membuat elemen ini sebagai acuan posisi*/
+}
+
+.login-header {
+    text-align: center; /*Mengatur posisi teks secara horizontal yaitu berada di tengah*/
+    margin-bottom: 40px;
+}
+
+.login-header h1 {
+    color: #f1f2f6;
+    font-size: 2rem;
+    margin-bottom: 10px; /*Mengatur jarak antar elemen ke bawah*/
+    color: #4ecdc4;
+}
+
+.login-header p {
+    color: #dfe4ea;
+    margin-bottom: 70px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative; /*Membuat elemen ini sebagai acuan posisi*/
+}
+
+.form-group label { 
+    display: block; /*Mengatur posisi teks secara vertikal yaitu agar berada di atas input */
+    margin-bottom: 8px;
+    color: #dfe4ea;
+    color: #4ecdc4;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; /*Mengubah teks menjadi huruf kapital*/
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px 10px;
+    color: #dfe4ea;
+    border-radius: 8px;
+    border: 2px solid #a4b0be;
+    font-size: 16px;
+    transition: all 0.3 ease;
+    background-color: #57606f;
+}
+
+.form-group input:focus { /*Mengatur gaya input ketika fokus atau ketika input aktif*/
+    outline: none;
+    border-color: #4ecdc4;
+    background: #747d8c;
+    box-shadow: 0 0 10px rgba(78, 205, 196, 0.4);
+}
+
+.form-group input::placeholder { /*Mengatur gaya placeholder input*/
+    color: #dfe4ea;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #4ecdc4, #45b7af);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.6);
+}
+
+
+.additional-links{
+    text-align: center;
+    margin-top: 25px;
+}
+
+.additional-links a {
+    color: #dfe4ea;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.additional-links a:hover {
+    color: #4ecdc4;
+}
+
+.social-icons {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons a {
+    margin: 10px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-size: 20px;
+    color: var(--color);
+}
+
+.social-icons a:hover {
+    background: var(--color);
+    color: #010101;
+    box-shadow: 0 0 5px var(--color),
+                 0 0 25px var(--color),
+                    0 0 50px var(--color),
+                   0 0 75px var(--color);
+}
+
+@media (max-width: 480px) { /* Agar tampilan dapat menjadi responsive*/
+    .login-container {
+        margin: 20px;
+        padding: 30px;
+    }
+    .social-icons {
+        top: 90px;
+    }
+}
