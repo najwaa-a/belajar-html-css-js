@@ -1,0 +1,230 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    --green: #57c192; /* fungsinya untuk mengubah warna green dengan menggunakan variabel */
+    --black: #252b42;
+}
+
+/* 
+    note : 
+        1. Padding > Letaknya di dalam kotak, fungsinya tu buat ngatur jarak dari isi kotaknya ke tepi kotak
+        2. Margin > Letaknya di luar kotak, fungsinya buat ngatur jarak ke elemen di luar kotak 
+*/
+
+.header {
+    background-color: #e9ebff;
+}
+
+.navbar {
+    width: 1000px; /* lebar navbar */
+    height: 150px; /* Tinggi navbar */
+    display: flex; /* ini bakalan jdi horizontal */
+    gap: 40px; /* ini buat ngatur jarak antar elemen */
+    align-items: center;
+    margin: 0 auto; /* ini navbarnya bakalan jdi ditengah */
+}
+
+.logo {
+    font-size: 30px; 
+    font-style: initial;
+    font-weight: bold;
+}
+
+.navbar-collpas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* si space-between ini fungsinya buat bikin elemennya jadi nyebar ke kanan sama kiri */
+    width: 100%;
+}
+
+/* note : buat margin bisa jg ditulis gini 
+    margin: atas, kanan, bawah, kiri;
+    contoh >> margin: 50px, 0, auto, 0;
+*/
+
+.navbar-collpas .navbar-list {
+    display: flex;
+    margin-left: 50px; /* Buat ngatur jarak dari kiri */
+    gap: 30px;
+    list-style: none;
+    font-size: 16px;
+    color: #737373;
+    font-weight: bold;
+}
+
+.login {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.login h3 {
+    color: var(--green);
+    font-size: 16px;
+}
+
+.login .join {
+    padding: 15px 30px; /* ini ukuran button nya */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: var(--green);
+    border-radius: 10px; /* ini sudut di button nya bakalan melengkung */
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .informasi {
+    display: flex;
+    flex-direction: column;
+    width: 571px; /* ini fungsinya buat ngatur lebarnya cuma ampe 571px gitu */
+    gap: 20px;
+}
+
+.hero .informasi h5 {
+    color: var(--green);
+    font-size: 20px;
+}
+
+.hero .informasi h1 {
+    color: var(--black);
+    font-size: 58px;
+}
+
+.hero .informasi h4 {
+    color: #737373;
+    font-size: 20px;
+    letter-spacing: 0.2px;  /* ini buat ngatur jarak antar huruf */
+    line-height: 30px; /* kalau yang ini, dia buat ngatur tinggi tiap baris */
+}
+
+.hero .informasi .btn button.get {
+    background-color: var(--green);
+    padding: 15px 40px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.hero .informasi .btn button.learn {
+    background-color: white;
+    border: 1px solid var(--green);
+    padding: 15px 40px;
+    border-radius: 10px;
+    color: var(--green);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.hero .gambar img {
+    width: 532px; /* ini buat ngatur ukuran gambarnya */
+}
+
+.container-section {
+    padding: 0 207px; /* ini tu fungsinya buat ngatur ukuran ruang kiri sama kanan */
+}
+
+.rangking .container {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0; /* kalau ini dia buat ngatur ruang atas dan bawah */
+    gap: 80px;
+    margin-top: 50px;
+}
+
+.rangking .container .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rangking .container .box h1 {
+    font-size: 58px;
+    font-weight: bold;
+    color: var(--green);
+    text-transform: uppercase; /* ya sesuai namanya 'uppercase', dia ngubah huruf jadi capital */
+}
+
+.rangking .container .box h5 {
+    font-size: 14px;
+    color: var(--black);
+}
+
+.activity {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+ 
+    gap: 20px;
+    margin: 80px 0 auto 0;
+}
+
+.activity h6 {
+    font-size: 16px;
+    color: var(--green);
+    font-weight: bold;
+    margin: 10px;
+}
+
+.activity h2 {
+    font-size: 40px;
+    color: var(--black);
+    font-weight: bold;
+    margin: 10px;
+}
+
+.activity p {
+    font-size: 16px;
+    color: #737373;
+    line-height: 20px;
+    margin: 10px;
+}
+
+.activity-box {
+    margin-top: 80px; /* ini fungsinya buat ngatur jarak atas sama elemen sebelumnya */
+    display: flex;
+    justify-content: center;
+    gap: 70px; /* kalau yang ini buat ngatur jarak antar box nya */
+    width: 100%;
+}
+
+.activity-box .box {
+    width: 328px; /* ini tu buat ngatur ukuran masing2 box */
+    padding: 35px 40px; /* ini buat ngatur padding dalam box */
+    gap: 50px;
+    justify-content: center;
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07); /* sesuai namanya, dia bakalan ngasih efek bayangan */
+}
+
+.activity-box .box .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(225, 0, 0, 0.1);
+    width: max-content;
+    padding: 10px;
+    border-radius: 50%; /* ini bakalan bikin icon nya jdi bulet  */
+}
+
+.activity-box .box .text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.activity-box .box .text h5 {
+    font-size: 16px;
+    color: var(--black);
+    font-weight: bold;
+}
+
+
+
